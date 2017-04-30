@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- define an angular module to work with -->
+<html ng-app="ev3">
+<head>
+	<title>EV3</title>
+</head>
+<body>
+ <!-- define the angular controller -->
+<div ng-controller="movementController">
+	<form>
+	<!-- buttons to control the direction of the movement and time to control the time of the movement -->
+		<button ng-click="movement('A')">Forward</button><input ng-model='time' type="number" name="time" />
+		<br />
+		<button ng-click="movement('B')">Backward</button>
+		<br />
+		<button ng-click="movement('C')">Left</button>
+		<br/>
+		<button ng-click="movement('D')">Right</button>
+	
+	</form>
+
+</div>
+
+<!-- load all the libraries and external files -->
+<script type="text/javascript" src='/socket.io/socket.io.js'></script>
+<script type="text/javascript" src='app/connect.js'></script>
+<script type="text/javascript" src="node_modules/angular/angular.js"></script>
+<script type="text/javascript" src="app/app.js"></script>
+
+</body>
+</html>
